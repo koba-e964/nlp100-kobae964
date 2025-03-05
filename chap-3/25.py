@@ -22,9 +22,9 @@ def extract_country_info(filename: str) -> dict[str, str]:
         last_bar = None
         split: list[str] = []
         for i in range(index - 1, pos):
-            if content[i] == '{':
+            if content[i] in ('{', '['):
                 level += 1
-            elif content[i] == '}':
+            elif content[i] in ('}', ']'):
                 level -= 1
             if level == 2 and content[i] == '|':
                 if last_bar is not None:
