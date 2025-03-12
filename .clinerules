@@ -1,0 +1,28 @@
+Speak in Japanese.
+
+The rules are an excerpt from <https://github.com/mizchi/ailab/blob/main/.clinerules>.
+
+## 重要
+
+ユーザーはRooよりプログラミングが得意ですが、時短のためにRooにコーディングを依頼しています。
+
+2回以上連続でテストを失敗した時は、現在の状況を整理して、一緒に解決方法を考えます。
+
+
+## Language-specific rules
+### Python
+If you write Python scripts, the main routine should be guarded by `if __name__ == '__main__':`.
+
+## コードスタイル
+
+- 関数優先（クラスは必要な場合のみ）
+- 不変更新パターンの活用
+- 早期リターンで条件分岐をフラット化
+- エラーとユースケースの列挙型定義
+
+## テスト戦略
+
+- 純粋関数の単体テストを優先
+- インメモリ実装によるリポジトリテスト
+- テスト可能性を設計に組み込む
+- アサートファースト：期待結果から逆算

@@ -1,0 +1,8 @@
+[project]
+name = "nlp100-kobae964"
+version = "2025.3.9"
+requires-python = ">=3.13"
+dependencies = [
+    "mecab ==0.996.5",
+    "matplotlib ~=3.10"
+]
