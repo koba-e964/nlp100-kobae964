@@ -7,4 +7,5 @@ dependencies = [
     "matplotlib ~=3.10",
     "cabocha-python ~= 0.69",
     "gensim ~= 4.3.2",
+    "scikit-learn ~= 1.7.1",
 ]

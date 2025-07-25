@@ -5,7 +5,7 @@ def read_combined_ssv(filename) -> dict[str, list[list[str]]]:
     """Read words"""
     data = []
     returned = {}
-    
+
     current_section = ''
     with open(filename, 'r', encoding='utf-8') as file:
         # 1行ずつ読み込み、空白で分割してdataに追加
@@ -20,7 +20,7 @@ def read_combined_ssv(filename) -> dict[str, list[list[str]]]:
                 continue
             parts = line.split()
             data.append(parts)
-    
+
     if data:
         returned[current_section] = data
     return returned
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         "GoogleNews-vectors-negative300.bin", binary=True)
 
     word_pairs = read_combined_ssv("questions-words.txt")
-    
+
     # Try finding similar words for first few entries
     print(f"({time.time() - start:.2f}s) Loaded {len(word_pairs)} word pairs:")
     for section in word_pairs:
